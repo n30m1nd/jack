@@ -18,7 +18,6 @@ Jack Contains:
 * resources/**
 * index.html
 * sandbox.html
-* oldIndex.html
 * start_jack.sh
 
 Requirements
