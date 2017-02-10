@@ -163,7 +163,7 @@
             </div>
 
             <div class="form-group">
-                <label for="inputButtonStyle" class="col-lg-2 control-label">204 Response Server</label>
+                <label for="inputButtonStyle" tooltip="Set this to the netcat listener to prevent redirections on old browsers" class="col-lg-2 control-label">Netcat's 204 Response Server (Old browsers)</label>
 
                 <div class="col-lg-10">
                     <input type="text" class="form-control" id="input204Response" placeholder="http://yourserver.com/204-no-content-response">
@@ -221,7 +221,7 @@
 <iframe id="targetIframe" scrolling="no" frameBorder="0"
         style="position: relative;overflow: hidden;margin: 0; padding: 0;display: block"
         src="" width="100%"
-        height="1000">
+        height="1000" sandbox="allow-forms">
 </iframe>
 
 </body>
