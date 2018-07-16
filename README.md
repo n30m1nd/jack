@@ -10,7 +10,11 @@ Overview
 Jack is a web based ClickJacking PoC development assistance tool.
 This fork in particular, helps bypassing JavaScript anti-clickjacking techniques.
 
-This fork of Jack makes use of static HTML, JavaScript, Python and Bash. 
+This Fork
+=====
+
+This fork of Jack was done to bypass Frame Buster Scripts to demonstrate that the `X-Frame-Options` header should be implemented.
+It also includes a `start_jack.sh` script to start it all with instructions.
 
 Contents
 ====
